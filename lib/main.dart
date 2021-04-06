@@ -2,11 +2,40 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: "Contador de Pessoas",
-    home: Container(
-      color: Colors.white,
-    )
-  ));
+      title: "Contador de Pessoas",
+      home: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "Pessoas: 0",
+            style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(
+                  onPressed: null,
+                  child: Text(
+                    "-1",
+                    style: TextStyle(fontSize: 40.0, color: Colors.green),
+                  )),
+              TextButton(
+                  onPressed: null,
+                  child: Text(
+                    "+1",
+                    style: TextStyle(fontSize: 40.0, color: Colors.green),
+                  )),
+            ],
+          ),
+          Text(
+            "Pode entrar!",
+            style: TextStyle(
+                color: Colors.green,
+                fontStyle: FontStyle.italic,
+                fontSize: 30.0),
+          )
+        ],
+      )));
 }
 
 //class MyApp extends StatelessWidget {
